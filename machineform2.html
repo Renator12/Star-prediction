@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+</head>
+<body>
+<h1>STAR TYPE PREDICTION</h1>
+<div>Predicts the type of star you are assigned</div>
+<style>
+    body {
+        background-image: url('https://cdn.wallpapersafari.com/49/28/PlbUCQ.jpg');
+    }
+</style>
+<img src="https://mindmatters.ai/wp-content/uploads/sites/2/2021/05/red-dwarf-star-sun-space-view-3d-render-stockpack-adobe-stock-scaled.jpg" alt="red dwarf image" width="300" height="300">
+<form action='/pred' method="POST">
+    <label for="TEMP">Temperature(K):</label><br>
+    <input type="text" id="tempid" name="temp"><br>
+    <label for="fname">Luminosity( relative to sun):</label><br>
+    <input type="text" id="lumid" name="lum"><br>
+    <label for="RAD">Radius(relative to sun):</label><br>
+    <input type="text" id="radid" name="rad"><br>
+    <label for="ABSMAG">Absolute Magnitude:</label><br>
+    <input type="text" id="magid" name="mag"><br>
+    <br>
+    <label for="">Choose a color:</label>
+
+    <select id="COLOR" name="col">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Blue-white">Blue-white</option>
+        <option value="yellow-white">Yellow-white</option>
+        <option value="white">White</option>
+        <option value="Yellowish">Yellowish</option>
+        <option value="Whitish">Whitish</option>
+        <option value="orange">Orange</option>
+        <option value="Pale yellow orange">Pale yellow orange</option>
+        <option value="White-Yellow">White-Yellow</option>
+        <option value='Blue'>Blue </option>
+        <option value="Orange-Red ">Orange-Red </option>
+        <option value="Blue white">Blue white</option>
+    </select>
+    <br>
+    <label for="">Choose a spectral class:</label>
+    <select id="SPECCLASS" name="spc">
+        <option value="M">M</option>
+        <option value="B">B</option>
+        <option value="O">O</option>
+        <option value="A">A</option>
+        <option value="F">F</option>
+        <option value="K">K</option>
+        <option value="G">G</option>
+    </select>
+    <input type="submit" value="Submit">
+    <p>THE PREDICTED SEQUENCE IS {{ prediction }}</p>
+
+
+
+
+</form>
+
+</body>
+</html>
